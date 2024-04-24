@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basis | jquery</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    .slider {
+        background-color: aqua;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px; 
+    }
+
+    .slider img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    h2{
+        padding: 10px;
+        background-color: aqua;
+    }
+    p{
+        padding: 10px;
+        font-size: 19px;
+    }
+    h4{
+        padding: 10px;
+        background: black;
+        color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <h2>Q.1  What is jQuery?</h2>
+    <p>
+       Ans:-  jQuery is a popular, fast, and concise JavaScript library designed to simplify HTML document traversing, event handling,  animating, and Ajax interactions for rapid web development. It allows developers to write less code while achieving more in terms of interactivity and functionality on their web pages.</p>
+        <p>One of the main advantages of jQuery is its ability to achieve cross-browser compatibility, meaning that the same code will work consistently across different web browsers. This simplifies development and testing, as developers don't need to write separate code for different browsers.</p>
+        <p>jQuery simplifies the process of manipulating HTML documents and handling events, making it easier to create dynamic and interactive web applications. It provides a wide range of features and utilities, such as DOM manipulation, CSS manipulation, event handling, animation effects, and AJAX functionality, all accessible via a simple and intuitive API.</p>
+        <p>Overall, jQuery has been widely adopted by web developers due to its ease of use, versatility, and extensive community support, making it a powerful tool for building modern web applications.</p>
+
+
+    <h2>Q.2:-How to Apply CSS Using JQuery, How to Add Class and Remove Class in 
+        Jquery, JQuery Animation?</h2>
+
+        <p>Ans:- Certainly! Here's how you can perform CSS manipulation, add and remove classes, and create animations using jQuery:</p>
+
+        <h4>Applying CSS using jQuery:</h4>
+        <p>You can use the `.css()` method to apply CSS styles to HTML elements.</p>
+        <p>// Syntax: $('selector').css('property', 'value');<br>
+
+        // Example: Change the color of all paragraphs to red <br>
+           $('p').css('color', 'red');
+        </p>
+
+        <h4>Adding and removing classes using jQuery:</h4>
+        <p>jQuery provides methods like `addClass()` and `removeClass()` to add or remove classes from HTML elements.</p>
+        <p>// Syntax to add a class: $('selector').addClass('classname');
+
+            // Syntax to remove a class: $('selector').removeClass('classname');<br>
+            
+            // Example: Add a class 'highlight' to all paragraphs<br>
+            $('p').addClass('highlight');<br>
+            
+            // Example: Remove a class 'active' from all divs<br>
+            $('div').removeClass('active');<br>
+            </p>
+        <h4>jQuery Animation:</h4>
+        <p>jQuery allows you to create animations on HTML elements using methods like `animate()`. You can animate properties like width, height, opacity, etc.</p>
+        <p>
+            // Syntax: $('selector').animate({properties}, duration);<br>
+
+            // Example: Animate the width of a div to 300px over 1 second<br>
+            $('div').animate({width: '300px'}, 1000);<br>
+        </p>
+
+        <p>These are basic examples to get you started. jQuery offers more advanced features for CSS manipulation and animation, allowing you to create dynamic and visually appealing web pages with ease.</p>
+
+        <h2> How to create slider with animation?</h2>
+        <div class="slider">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
+        </div>
+        <script>
+          $(document).ready(function() {
+          var slides = $('.slider img');
+          var currentSlide = 0;
+    
+    // Show the first image initially
+          slides.eq(currentSlide).show();
+    
+    // Set interval for image transition
+          setInterval(function() {
+          slides.eq(currentSlide).fadeOut(1000);
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides.eq(currentSlide).fadeIn(1000);
+    }, 3000); // Change image every 3 seconds
+});
+
+
+        </script>
+
+</body>
+</html>
+
