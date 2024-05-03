@@ -10,21 +10,7 @@
             margin: 0;
             box-sizing: border-box;
         }
-    .slider {
-        background-color: aqua;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 300px; 
-    }
-
-    .slider img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: none;
-    }
+   
     h2{
         padding: 10px;
         background-color: aqua;
@@ -84,31 +70,6 @@
         </p>
 
         <p>These are basic examples to get you started. jQuery offers more advanced features for CSS manipulation and animation, allowing you to create dynamic and visually appealing web pages with ease.</p>
-
-        <h2> How to create slider with animation?</h2>
-        <div class="slider">
-            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
-            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
-            <img src="https://images.hdqwalls.com/wallpapers/bthumb/ford-mustang-60th-anniversary-package-2025-h1.jpg" alt="">
-        </div>
-        <script>
-          $(document).ready(function() {
-          var slides = $('.slider img');
-          var currentSlide = 0;
-    
-    // Show the first image initially
-          slides.eq(currentSlide).show();
-    
-    // Set interval for image transition
-          setInterval(function() {
-          slides.eq(currentSlide).fadeOut(1000);
-          currentSlide = (currentSlide + 1) % slides.length;
-          slides.eq(currentSlide).fadeIn(1000);
-    }, 3000); // Change image every 3 seconds
-});
-
-
-        </script>
 
 </body>
 </html>
