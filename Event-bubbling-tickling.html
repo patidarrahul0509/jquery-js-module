@@ -6,7 +6,7 @@
     <title>Event bubbling tickling</title>
     <style>
         *{
-            color: red;
+            color: black;
             padding: 10px;
         }
         div{
@@ -28,14 +28,14 @@
 </head>
 <body>
     
-    (great-great-grandparent)
+    (grand-grand-grandparent)
     <div>
-        (great-grandparent)
+        (grend-grandparent)
         <ul type="none" id="">
-            (grandparent)
+            (parent)
             <li>
-                (direct-grandparent) <br>
-                <input type="text" id="in" placeholder="span">
+                (son) <br>
+                <input type="text" id="input" placeholder="span">
             </li>
         </ul>
     </div>
@@ -44,7 +44,7 @@
     <script>
 
     $(document).ready(function(){
-       $("#in").parentsUntil().css("border","1px solid red") 
+       $("#input").parentsUntil().css("border","1px solid black") 
     })
 
     </script>
